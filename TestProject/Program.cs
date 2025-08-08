@@ -1,7 +1,21 @@
-﻿int firstValue = 500;
-int secondValue = 600;
-int largerValue;
+﻿Random dice = new Random();
 
-largerValue = Math.Max(firstValue, secondValue);
+int roll1 = dice.Next(1, 7);
+int roll2 = dice.Next(1, 7);
+int roll3 = dice.Next(1, 7);
 
-System.Console.WriteLine(largerValue);
+int total = roll1 + roll2 + roll3;
+
+Console.WriteLine($"Dice roll: {roll1} + {roll2} + {roll3} = {total}");
+
+if (total > 14)
+{
+  System.Console.WriteLine("You win!");
+}
+
+if (total < 15)
+{
+  System.Console.WriteLine("Sorry, you lose.");
+}
+
+
