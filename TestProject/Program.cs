@@ -1,21 +1,28 @@
-﻿Random dice = new Random();
+﻿Random random = new();
+int daysUntilExpiration = random.Next(12);
+int discountPercentage = 0;
 
-int roll1 = dice.Next(1, 7);
-int roll2 = dice.Next(1, 7);
-int roll3 = dice.Next(1, 7);
-
-int total = roll1 + roll2 + roll3;
-
-Console.WriteLine($"Dice roll: {roll1} + {roll2} + {roll3} = {total}");
-
-if (total > 14)
+if (daysUntilExpiration == 0)
 {
-  System.Console.WriteLine("You win!");
+  System.Console.WriteLine("Your subscription has expired.");
+}
+else if (daysUntilExpiration == 1)
+{
+  System.Console.WriteLine("Your subscription expires within a day!");
+  discountPercentage = 20;
+}
+else if (daysUntilExpiration <= 5)
+{
+  System.Console.WriteLine($"Your subscription expires in {daysUntilExpiration} days.");
+  discountPercentage = 10;
+}
+else if (daysUntilExpiration <= 10)
+{
+  System.Console.WriteLine("Your subscription will expire soon. Renew now!");
 }
 
-if (total < 15)
+if (discountPercentage > 0)
 {
-  System.Console.WriteLine("Sorry, you lose.");
+  System.Console.WriteLine($"Renew now and save {discountPercentage}%!");
 }
-
 
