@@ -16,6 +16,7 @@ foreach (char character in characterArray)
   }
 }
 
+
 string new_message = new string(characterArray);
 
 Console.WriteLine(new_message);

@@ -7,6 +7,7 @@ System.Console.WriteLine(myValue == "a");
 
 string value1 = " a";
 string value2 = "A ";
+
 System.Console.WriteLine(value1.Trim().ToLower() == value2.Trim().ToLower());
 
 System.Console.WriteLine("a" != "a");
@@ -26,3 +27,5 @@ System.Console.WriteLine(!pangram.Contains("fox"));
 System.Console.WriteLine(!pangram.Contains("cow"));
 System.Console.WriteLine(pangram.Contains("fox") == false);
 System.Console.WriteLine(!pangram.Contains("fox"));
+
+Console.WriteLine();
