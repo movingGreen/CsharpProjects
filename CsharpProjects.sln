@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject3", "TestProject
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteScope", "TesteScope\TesteScope.csproj", "{A0F68F9B-120B-49FB-AB06-0EA70C470AA3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwitchCase", "SwitchCase\SwitchCase.csproj", "{1B245130-01BA-4C8B-93F8-4ABAEDE1584D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,18 @@ Global
 		{A0F68F9B-120B-49FB-AB06-0EA70C470AA3}.Release|x64.Build.0 = Release|Any CPU
 		{A0F68F9B-120B-49FB-AB06-0EA70C470AA3}.Release|x86.ActiveCfg = Release|Any CPU
 		{A0F68F9B-120B-49FB-AB06-0EA70C470AA3}.Release|x86.Build.0 = Release|Any CPU
+		{1B245130-01BA-4C8B-93F8-4ABAEDE1584D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B245130-01BA-4C8B-93F8-4ABAEDE1584D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B245130-01BA-4C8B-93F8-4ABAEDE1584D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1B245130-01BA-4C8B-93F8-4ABAEDE1584D}.Debug|x64.Build.0 = Debug|Any CPU
+		{1B245130-01BA-4C8B-93F8-4ABAEDE1584D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1B245130-01BA-4C8B-93F8-4ABAEDE1584D}.Debug|x86.Build.0 = Debug|Any CPU
+		{1B245130-01BA-4C8B-93F8-4ABAEDE1584D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B245130-01BA-4C8B-93F8-4ABAEDE1584D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B245130-01BA-4C8B-93F8-4ABAEDE1584D}.Release|x64.ActiveCfg = Release|Any CPU
+		{1B245130-01BA-4C8B-93F8-4ABAEDE1584D}.Release|x64.Build.0 = Release|Any CPU
+		{1B245130-01BA-4C8B-93F8-4ABAEDE1584D}.Release|x86.ActiveCfg = Release|Any CPU
+		{1B245130-01BA-4C8B-93F8-4ABAEDE1584D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
