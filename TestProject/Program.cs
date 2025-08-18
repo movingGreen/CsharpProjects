@@ -1,23 +1,14 @@
-﻿/*
-  O propósito deste código é reverter uma string
-  e contar quantas vezes a letra 'o' aparece nela.
-*/
-string textToCount = "The quick brown fox jumps over the lazy dog.";
-char[] characterArray = textToCount.ToCharArray();
-int letterCount = 0;
+﻿string[] names = ["Alex", "Eddie", "David", "Michael"];
 
-Array.Reverse(characterArray);
-
-foreach (char character in characterArray)
+for (int i = 0; i < names.Length; i++)
 {
-  if (character == 'o')
+  if (names[i] == "David")
   {
-    letterCount++;
+    names[i] = "Sammy";
   }
 }
 
-
-string new_message = new string(characterArray);
-
-Console.WriteLine(new_message);
-Console.WriteLine($"'o' appears {letterCount} times.");
+foreach (var name in names)
+{
+  System.Console.WriteLine(name);
+}
