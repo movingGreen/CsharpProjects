@@ -1,14 +1,19 @@
-﻿string[] names = ["Alex", "Eddie", "David", "Michael"];
-
-for (int i = 0; i < names.Length; i++)
+﻿for (int i = 0; i < 100; i++)
 {
-  if (names[i] == "David")
+  Console.Write(i);
+
+  if (i % 3 == 0 && i % 5 == 0)
   {
-    names[i] = "Sammy";
+    Console.Write(" - FizzBuzz");
   }
-}
+  else if (i % 3 == 0)
+  {
+    Console.Write(" - Fizz");
+  }
+  else if (i % 5 == 0)
+  {
+    Console.Write(" - Buzz");
+  }
 
-foreach (var name in names)
-{
-  System.Console.WriteLine(name);
+  Console.WriteLine();
 }
