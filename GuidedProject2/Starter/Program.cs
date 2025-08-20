@@ -138,28 +138,28 @@ do
 
         case "5":
             // Edit an animal’s age
-            Console.WriteLine("this app feature is coming soon - please check back to see progress.");
+            Console.WriteLine("UNDER CONSTRUCTION - please check back next month to see progress.");
             Console.WriteLine("Press the Enter key to continue.");
             readResult = Console.ReadLine();
             break;
 
         case "6":
             // Edit an animal’s personality description
-            Console.WriteLine("this app feature is coming soon - please check back to see progress.");
+            Console.WriteLine("UNDER CONSTRUCTION - please check back next month to see progress.");
             Console.WriteLine("Press the Enter key to continue.");
             readResult = Console.ReadLine();
             break;
 
         case "7":
             // Display all cats with a specified characteristic
-            Console.WriteLine("this app feature is coming soon - please check back to see progress.");
+            Console.WriteLine("UNDER CONSTRUCTION - please check back next month to see progress.");
             Console.WriteLine("Press the Enter key to continue.");
             readResult = Console.ReadLine();
             break;
 
         case "8":
             // Display all  dogs with a specified characteristic
-            Console.WriteLine("this app feature is coming soon - please check back to see progress.");
+            Console.WriteLine("UNDER CONSTRUCTION - please check back next month to see progress.");
             Console.WriteLine("Press the Enter key to continue.");
             readResult = Console.ReadLine();
             break;
