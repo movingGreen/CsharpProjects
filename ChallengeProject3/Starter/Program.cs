@@ -178,7 +178,7 @@ do
                 } while (validEntry == false);
 
                 // build the animal the ID number - for example C1, C2, D3 (for Cat 1, Cat 2, Dog 3)
-                animalID = animalSpecies.Substring(0, 1) + (petCount + 1).ToString();
+                animalID = string.Concat(animalSpecies.AsSpan(0, 1), (petCount + 1).ToString());
 
                 // get the pet's age. can be ? at initial entry.
                 do
@@ -287,9 +287,45 @@ do
 
         case "3":
             // Ensure animal ages and physical descriptions are complete
-            Console.WriteLine("Challenge Project - please check back soon to see progress.");
-            Console.WriteLine("Press the Enter key to continue.");
-            readResult = Console.ReadLine();
+
+            for (int i = 0; i < ourAnimals.Length; i++)
+            {
+                animalID = ourAnimals[i, 0];
+
+                if (!(animalID.Contains('c') || animalID.Contains('d')))
+                {
+                    continue;
+                }
+                animalAge = ourAnimals[i, 2].AsSpan(5).ToString();
+
+                if (string.IsNullOrWhiteSpace(animalAge) || animalAge == "?")
+                {
+                    do
+                    {
+                        validEntry = false;
+
+                        System.Console.WriteLine($"Enter an age for {animalID}");
+                        readResult = Console.ReadLine();
+
+                        if (readResult != null)
+                        {
+                            if (int.TryParse(readResult, out petAge))
+                            {
+                                animalAge = readResult;
+                                validEntry = true;
+                            }
+                        }
+                    } while (validEntry == false);
+                }
+
+
+                animalPhysicalDescription = ourAnimals[i, 4];
+
+                animalID = string.Concat(animalSpecies.AsSpan(0, 1), (petCount + 1).ToString());
+
+            }
+
+
             break;
 
         case "4":
@@ -312,7 +348,7 @@ do
             Console.WriteLine("Press the Enter key to continue.");
             readResult = Console.ReadLine();
             break;
-        
+
         case "7":
             // Display all cats with a specified characteristic
             Console.WriteLine("UNDER CONSTRUCTION - please check back next month to see progress.");
