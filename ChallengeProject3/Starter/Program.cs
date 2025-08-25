@@ -288,7 +288,7 @@ do
         case "3":
             // Ensure animal ages and physical descriptions are complete
 
-            for (int i = 0; i < ourAnimals.Length; i++)
+            for (int i = 0; i < maxPets; i++)
             {
                 animalID = ourAnimals[i, 0];
 
@@ -296,9 +296,10 @@ do
                 {
                     continue;
                 }
-                animalAge = ourAnimals[i, 2].AsSpan(5).ToString();
 
-                if (string.IsNullOrWhiteSpace(animalAge) || animalAge == "?")
+                animalAge = ourAnimals[i, 2];
+
+                if (animalAge == "Age: ?")
                 {
                     do
                     {
@@ -311,19 +312,36 @@ do
                         {
                             if (int.TryParse(readResult, out petAge))
                             {
-                                animalAge = readResult;
+                                ourAnimals[i, 2] = "Age: " + readResult;
                                 validEntry = true;
                             }
                         }
                     } while (validEntry == false);
                 }
 
-
                 animalPhysicalDescription = ourAnimals[i, 4];
 
-                animalID = string.Concat(animalSpecies.AsSpan(0, 1), (petCount + 1).ToString());
+                if (animalPhysicalDescription == "Physical description: ")
+                {
+                    do
+                    {
+                        validEntry = false;
+
+                        System.Console.WriteLine($"Enter a physical description for {animalID} (size, color, gender, weight, housebroken)");
+                        readResult = Console.ReadLine();
+
+                        if (!string.IsNullOrWhiteSpace(readResult))
+                        {
+                            ourAnimals[i, 4] = "Physical description: " + readResult.ToLower();
+
+                            validEntry = true;
+                        }
+                    } while (validEntry == false);
+                }
 
             }
+
+            System.Console.WriteLine("Age and physical description fields are complete for all of our friends.");
 
 
             break;
