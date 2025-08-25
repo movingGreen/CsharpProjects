@@ -342,15 +342,65 @@ do
             }
 
             System.Console.WriteLine("Age and physical description fields are complete for all of our friends.");
-
+            Console.WriteLine("Press the Enter key to continue.");
+            Console.ReadLine();
 
             break;
 
         case "4":
             // Ensure animal nicknames and personality descriptions are complete
-            Console.WriteLine("Challenge Project - please check back soon to see progress.");
+            for (int i = 0; i < maxPets; i++)
+            {
+                animalID = ourAnimals[i, 0];
+
+                if (!(animalID.Contains('c') || animalID.Contains('d')))
+                {
+                    continue;
+                }
+
+                animalNickname = ourAnimals[i, 3];
+
+                if (animalNickname == "Nickname: ")
+                {
+                    do
+                    {
+                        validEntry = false;
+
+                        System.Console.WriteLine($"Enter a nickname for {animalID}");
+                        readResult = Console.ReadLine();
+
+                        if (!string.IsNullOrWhiteSpace(readResult))
+                        {
+                            ourAnimals[i, 3] = "Nickname: " + readResult;
+                            validEntry = true;
+                        }
+                    } while (validEntry == false);
+                }
+
+                animalPersonalityDescription = ourAnimals[i, 4];
+
+                if (animalPersonalityDescription == "Personality: ")
+                {
+                    do
+                    {
+                        validEntry = false;
+
+                        System.Console.WriteLine($"Enter a personality description for {animalID} (likes or dislikes, tricks, energy level)");
+                        readResult = Console.ReadLine();
+
+                        if (!string.IsNullOrWhiteSpace(readResult))
+                        {
+                            ourAnimals[i, 4] = "Physical description: " + readResult.ToLower();
+                            validEntry = true;
+                        }
+                    } while (validEntry == false);
+                }
+
+            }
+
+            System.Console.WriteLine("Nickname and personality description fields are complete for all of our friends.");
             Console.WriteLine("Press the Enter key to continue.");
-            readResult = Console.ReadLine();
+            Console.ReadLine();
             break;
 
         case "5":
