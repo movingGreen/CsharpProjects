@@ -377,7 +377,7 @@ do
                     } while (validEntry == false);
                 }
 
-                animalPersonalityDescription = ourAnimals[i, 4];
+                animalPersonalityDescription = ourAnimals[i, 5];
 
                 if (animalPersonalityDescription == "Personality: ")
                 {
@@ -390,7 +390,7 @@ do
 
                         if (!string.IsNullOrWhiteSpace(readResult))
                         {
-                            ourAnimals[i, 4] = "Physical description: " + readResult.ToLower();
+                            ourAnimals[i, 5] = "Physical description: " + readResult.ToLower();
                             validEntry = true;
                         }
                     } while (validEntry == false);
