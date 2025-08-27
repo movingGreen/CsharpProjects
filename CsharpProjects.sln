@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Starter3", "ChallengeProjec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Final3", "ChallengeProject3\Final\Final3.csproj", "{653549B3-3D97-43D6-9222-FFEC4C84A928}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{8C3EC92F-5FF7-4A27-8659-18E7FED992AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -231,6 +233,18 @@ Global
 		{653549B3-3D97-43D6-9222-FFEC4C84A928}.Release|x64.Build.0 = Release|Any CPU
 		{653549B3-3D97-43D6-9222-FFEC4C84A928}.Release|x86.ActiveCfg = Release|Any CPU
 		{653549B3-3D97-43D6-9222-FFEC4C84A928}.Release|x86.Build.0 = Release|Any CPU
+		{8C3EC92F-5FF7-4A27-8659-18E7FED992AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C3EC92F-5FF7-4A27-8659-18E7FED992AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C3EC92F-5FF7-4A27-8659-18E7FED992AF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8C3EC92F-5FF7-4A27-8659-18E7FED992AF}.Debug|x64.Build.0 = Debug|Any CPU
+		{8C3EC92F-5FF7-4A27-8659-18E7FED992AF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8C3EC92F-5FF7-4A27-8659-18E7FED992AF}.Debug|x86.Build.0 = Debug|Any CPU
+		{8C3EC92F-5FF7-4A27-8659-18E7FED992AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C3EC92F-5FF7-4A27-8659-18E7FED992AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C3EC92F-5FF7-4A27-8659-18E7FED992AF}.Release|x64.ActiveCfg = Release|Any CPU
+		{8C3EC92F-5FF7-4A27-8659-18E7FED992AF}.Release|x64.Build.0 = Release|Any CPU
+		{8C3EC92F-5FF7-4A27-8659-18E7FED992AF}.Release|x86.ActiveCfg = Release|Any CPU
+		{8C3EC92F-5FF7-4A27-8659-18E7FED992AF}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
