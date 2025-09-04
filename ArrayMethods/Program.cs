@@ -56,16 +56,32 @@ string[] pallets = ["B14", "A11", "B12", "A13"];
 //   Console.WriteLine($"-- {pallet}");
 // }
 
-string value = "abc123";
-char[] valueArray = value.ToCharArray();
-Array.Reverse(valueArray);
-// string result = new(valueArray);
-string result = string.Join(",", valueArray);
-System.Console.WriteLine(result);
+// string value = "abc123";
+// char[] valueArray = value.ToCharArray();
+// Array.Reverse(valueArray);
+// // string result = new(valueArray);
+// string result = string.Join(",", valueArray);
+// System.Console.WriteLine(result);
 
-string[] items = result.Split(',');
+// string[] items = result.Split(',');
 
-foreach (string item in items)
+// foreach (string item in items)
+// {
+//   System.Console.WriteLine(item);
+// }
+
+string pangram = "The quick brown fox jumps over the lazy dog";
+string[] words = pangram.Split(" ");
+
+for (var i = 0; i < words.Length; i++)
 {
-  System.Console.WriteLine(item);
+  char[] charList = words[i].ToCharArray();
+  Array.Reverse(charList);
+  string? reversedWord = string.Join("", charList);
+
+  if (reversedWord != null)
+    words[i] = reversedWord;
 }
+
+pangram = string.Join(" ", words);
+System.Console.WriteLine(pangram);
