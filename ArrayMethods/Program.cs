@@ -70,6 +70,8 @@ string[] pallets = ["B14", "A11", "B12", "A13"];
 //   System.Console.WriteLine(item);
 // }
 
+// ------------------------------------------
+
 string pangram = "The quick brown fox jumps over the lazy dog";
 string[] words = pangram.Split(" ");
 
@@ -77,11 +79,27 @@ for (var i = 0; i < words.Length; i++)
 {
   char[] charList = words[i].ToCharArray();
   Array.Reverse(charList);
-  string? reversedWord = string.Join("", charList);
-
-  if (reversedWord != null)
-    words[i] = reversedWord;
+  string reversedWord = string.Join("", charList);
+  words[i] = new string(reversedWord);
 }
 
 pangram = string.Join(" ", words);
 System.Console.WriteLine(pangram);
+
+//---------------------------------------------------------------
+
+string orderStream = "B123,C234,A345,C15,B177,G3003,C235,B179";
+string[] orderList = orderStream.Split(",");
+Array.Sort(orderList);
+
+foreach (string orderId in orderList)
+{
+  if (orderId.Length != 4)
+  {
+    System.Console.WriteLine($"{orderId}\t - Error");
+  }
+  else
+  {
+    System.Console.WriteLine(orderId);
+  }
+}
