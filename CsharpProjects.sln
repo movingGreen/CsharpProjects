@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormatAphanumericData", "Fo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "challenge5", "challenge5\challenge5.csproj", "{79270679-5DC5-4F3A-86A8-733163241071}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormatingWithMethods", "FormatingWithMethods\FormatingWithMethods.csproj", "{DD162F7B-694E-4371-8FEB-114D9A1A9449}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -301,6 +303,18 @@ Global
 		{79270679-5DC5-4F3A-86A8-733163241071}.Release|x64.Build.0 = Release|Any CPU
 		{79270679-5DC5-4F3A-86A8-733163241071}.Release|x86.ActiveCfg = Release|Any CPU
 		{79270679-5DC5-4F3A-86A8-733163241071}.Release|x86.Build.0 = Release|Any CPU
+		{DD162F7B-694E-4371-8FEB-114D9A1A9449}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD162F7B-694E-4371-8FEB-114D9A1A9449}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD162F7B-694E-4371-8FEB-114D9A1A9449}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DD162F7B-694E-4371-8FEB-114D9A1A9449}.Debug|x64.Build.0 = Debug|Any CPU
+		{DD162F7B-694E-4371-8FEB-114D9A1A9449}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DD162F7B-694E-4371-8FEB-114D9A1A9449}.Debug|x86.Build.0 = Debug|Any CPU
+		{DD162F7B-694E-4371-8FEB-114D9A1A9449}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD162F7B-694E-4371-8FEB-114D9A1A9449}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD162F7B-694E-4371-8FEB-114D9A1A9449}.Release|x64.ActiveCfg = Release|Any CPU
+		{DD162F7B-694E-4371-8FEB-114D9A1A9449}.Release|x64.Build.0 = Release|Any CPU
+		{DD162F7B-694E-4371-8FEB-114D9A1A9449}.Release|x86.ActiveCfg = Release|Any CPU
+		{DD162F7B-694E-4371-8FEB-114D9A1A9449}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
