@@ -99,13 +99,34 @@
 //   Console.WriteLine(message.Substring(openingPosition, length));
 // }
 
-string data = "12345John Smith          5000  3  ";
-string updateData = data.Remove(5, 20);
+// string data = "12345John Smith          5000  3  ";
+// string updateData = data.Remove(5, 20);
 
-Console.WriteLine(updateData);
+// Console.WriteLine(updateData);
 
-string message = "This--is--ex-amp-le--da-ta";
-message = message.Replace("--", " ");
-message = message.Replace("-", "");
+// string message = "This--is--ex-amp-le--da-ta";
+// message = message.Replace("--", " ");
+// message = message.Replace("-", "");
 
-System.Console.WriteLine(message);
+// System.Console.WriteLine(message);
+
+
+const string input = "<div><h2>Widgets &trade;</h2><span>5000</span></div>";
+
+string quantity = "";
+string output = "";
+
+// Your work here
+int startSpan = input.IndexOf("<span>") + 6;
+int startDiv = input.IndexOf("<div>");
+
+quantity = input.Substring(startSpan, 4);
+output = input.Remove(startDiv, 5);
+
+int endDiv = output.IndexOf("</div>");
+
+output = output.Remove(endDiv);
+output = output.Replace("&trade;", "&reg;");
+
+Console.WriteLine(quantity);
+Console.WriteLine(output);
