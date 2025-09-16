@@ -114,10 +114,27 @@ void ValidateZeroes()
     if (number.Length > 1 && number.StartsWith("0"))
     {
       validZeroes = false;
+      return;
     }
   }
 
   validZeroes = true;
 }
 
-void ValidateRange() { }
+void ValidateRange()
+{
+  string[] address = ipv4Input.Split(".", StringSplitOptions.RemoveEmptyEntries);
+
+  foreach (string number in address)
+  {
+    int value = int.Parse(number);
+
+    if (value < 0 || value > 255)
+    {
+      validRange = false;
+      return;
+    }
+  }
+
+  validRange = true;
+}
