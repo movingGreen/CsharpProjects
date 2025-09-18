@@ -43,32 +43,46 @@
 //   System.Console.WriteLine();
 // }
 // =========================================
-using System.Net.NetworkInformation;
-double pi = 3.14159;
-PrintCircleInfo(12);
-PrintCircleInfo(24);
+// using System.Net.NetworkInformation;
+// double pi = 3.14159;
+// PrintCircleInfo(12);
+// PrintCircleInfo(24);
 
-// double circumference = 2 * pi * radius;
+// // double circumference = 2 * pi * radius;
 
-void PrintCircleArea(int radius)
+// void PrintCircleArea(int radius)
+// {
+
+//   double area = pi * (radius * radius);
+
+//   System.Console.WriteLine($"Area = {area}");
+// }
+
+// void PrintCircleCircumference(int radius)
+// {
+
+//   double circumference = 2 * pi * radius;
+
+//   System.Console.WriteLine($"Circumference = {circumference}");
+// }
+
+// void PrintCircleInfo(int radius)
+// {
+//   System.Console.WriteLine($"Circle with radius {radius}");
+//   PrintCircleArea(radius);
+//   PrintCircleCircumference(radius);
+// }
+// ===========================================
+
+int a = 3;
+int b = 4;
+int c = 0;
+
+Multiply(a, b, c);
+Console.WriteLine($"global statement: {a} x {b} = {c}");
+
+void Multiply(int a, int b, int c)
 {
-
-  double area = pi * (radius * radius);
-
-  System.Console.WriteLine($"Area = {area}");
-}
-
-void PrintCircleCircumference(int radius)
-{
-
-  double circumference = 2 * pi * radius;
-
-  System.Console.WriteLine($"Circumference = {circumference}");
-}
-
-void PrintCircleInfo(int radius)
-{
-  System.Console.WriteLine($"Circle with radius {radius}");
-  PrintCircleArea(radius);
-  PrintCircleCircumference(radius);
+  c = a * b;
+  System.Console.WriteLine($"inside Multiply method: {a} x {b} = {c}");
 }
