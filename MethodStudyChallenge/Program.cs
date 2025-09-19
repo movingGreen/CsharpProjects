@@ -28,8 +28,8 @@ for (int i = 0; i < external.GetLength(0); i++)
 
 void ShowEmail(string firstName, string lastName, string domain)
 {
-  firstName = firstName.ToLower().AsSpan(0, 2).ToString();
-  lastName = lastName.ToLower();
+  string name = firstName[..2] + lastName;
+  name = name.ToLower();
 
-  System.Console.WriteLine($"{firstName}{lastName}@{domain}");
+  System.Console.WriteLine($"{name}@{domain}");
 }
