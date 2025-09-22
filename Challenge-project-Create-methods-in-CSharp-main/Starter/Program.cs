@@ -5,6 +5,9 @@ Console.CursorVisible = false;
 int height = Console.WindowHeight - 1;
 int width = Console.WindowWidth - 5;
 bool shouldExit = false;
+bool exitOnNotDirection = true;
+bool enableExtraSpeed = false;
+bool addExtraSpeed = false;
 
 // Console position of the player
 int playerX = 0;
@@ -29,11 +32,15 @@ while (!shouldExit)
 {
     if (!TerminalResized())
     {
-        Move(exitOnNotDirection: true);
+        Move(exitOnNotDirection, addExtraSpeed);
 
         if (PlayerAteFood())
         {
             ChangePlayer();
+
+            string status = CheckFoodStatus();
+
+            ApplyFoodEffect(status);
             ShowFood();
         }
     }
@@ -43,6 +50,38 @@ while (!shouldExit)
         System.Console.WriteLine("Console was resized. Program exiting.");
         shouldExit = true;
     }
+}
+
+string CheckFoodStatus()
+{
+    return player switch
+    {
+        "('-')" => "normal",
+        "(^-^)" => "speed",
+        "(X_X)" => "freeze",
+        _ => "",
+    };
+}
+
+void ApplyFoodEffect(string foodStatus)
+{
+    switch (foodStatus)
+    {
+
+        case "speed":
+            addExtraSpeed = enableExtraSpeed;
+            break;
+
+        case "freeze":
+            FreezePlayer();
+            addExtraSpeed = false;
+            break;
+
+        default:
+            addExtraSpeed = false;
+            break;
+    }
+
 }
 
 bool PlayerAteFood()
@@ -87,7 +126,7 @@ void FreezePlayer()
 }
 
 // Reads directional input from the Console and moves the player
-void Move(bool exitOnNotDirection = false)
+void Move(bool exitOnNotDirection = false, bool addExtraSpeed = false)
 {
     int lastX = playerX;
     int lastY = playerY;
@@ -101,10 +140,10 @@ void Move(bool exitOnNotDirection = false)
             playerY++;
             break;
         case ConsoleKey.LeftArrow:
-            playerX--;
+            playerX -= addExtraSpeed ? 3 : 1;
             break;
         case ConsoleKey.RightArrow:
-            playerX++;
+            playerX += addExtraSpeed ? 3 : 1;
             break;
         case ConsoleKey.Escape:
             shouldExit = true;
