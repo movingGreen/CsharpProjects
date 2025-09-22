@@ -28,13 +28,26 @@ InitializeGame();
 while (!shouldExit)
 {
     if (!TerminalResized())
-        Move(exitOnNotDirection: false);
+    {
+        Move(exitOnNotDirection: true);
+
+        if (PlayerAteFood())
+        {
+            ChangePlayer();
+            ShowFood();
+        }
+    }
     else
     {
         Console.Clear();
         System.Console.WriteLine("Console was resized. Program exiting.");
         shouldExit = true;
     }
+}
+
+bool PlayerAteFood()
+{
+    return playerX == foodX && playerY == foodY;
 }
 
 // Returns true if the Terminal was resized 
@@ -103,8 +116,6 @@ void Move(bool exitOnNotDirection = false)
                 return;
             }
             break;
-
-
     }
 
     // Clear the characters at the previous position
