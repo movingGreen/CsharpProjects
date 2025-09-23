@@ -81,6 +81,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarterChallenge5", "Challe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalChallenge5", "Challenge-project-Create-methods-in-CSharp-main\Final\FinalChallenge5.csproj", "{62E76F5C-E23B-431A-81DE-82E3BAC3BEF9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Debug101", "Debug101\Debug101.csproj", "{BEC6E013-06F6-42FD-BF3D-EDE2A5904E9C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -475,6 +477,18 @@ Global
 		{62E76F5C-E23B-431A-81DE-82E3BAC3BEF9}.Release|x64.Build.0 = Release|Any CPU
 		{62E76F5C-E23B-431A-81DE-82E3BAC3BEF9}.Release|x86.ActiveCfg = Release|Any CPU
 		{62E76F5C-E23B-431A-81DE-82E3BAC3BEF9}.Release|x86.Build.0 = Release|Any CPU
+		{BEC6E013-06F6-42FD-BF3D-EDE2A5904E9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEC6E013-06F6-42FD-BF3D-EDE2A5904E9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEC6E013-06F6-42FD-BF3D-EDE2A5904E9C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BEC6E013-06F6-42FD-BF3D-EDE2A5904E9C}.Debug|x64.Build.0 = Debug|Any CPU
+		{BEC6E013-06F6-42FD-BF3D-EDE2A5904E9C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BEC6E013-06F6-42FD-BF3D-EDE2A5904E9C}.Debug|x86.Build.0 = Debug|Any CPU
+		{BEC6E013-06F6-42FD-BF3D-EDE2A5904E9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEC6E013-06F6-42FD-BF3D-EDE2A5904E9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEC6E013-06F6-42FD-BF3D-EDE2A5904E9C}.Release|x64.ActiveCfg = Release|Any CPU
+		{BEC6E013-06F6-42FD-BF3D-EDE2A5904E9C}.Release|x64.Build.0 = Release|Any CPU
+		{BEC6E013-06F6-42FD-BF3D-EDE2A5904E9C}.Release|x86.ActiveCfg = Release|Any CPU
+		{BEC6E013-06F6-42FD-BF3D-EDE2A5904E9C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
